@@ -1,0 +1,23 @@
+/* This stylesheet is mainly for presentation purposes and
+should not impact functionality or purpose of main component */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsl(221, 16%, 27%);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+section {
+    flex: 1;
+    display: grid;
+    place-items: center;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    padding: 1rem;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
