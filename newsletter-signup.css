@@ -1,2 +1,39 @@
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+#newsletter-signup {
+    /* Primary colours */
+    --tomato: hsl(4, 100%, 67%);
+    /* Neutral colours */
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Typography */
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+
+    /* Set defaults */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+#newsletter-signup {
+    max-width: 600px;
+    background-color: var(--white);
+    max-width: 925px;
+    padding: 1.5rem;
+    border-radius: 35px;
+}
+/* Mobile view styling */
+@media only screen and (max-width: 600px) {
+    #newsletter-signup {
+        min-width: 100%;
+        border-radius: 0;
+    }
+}
