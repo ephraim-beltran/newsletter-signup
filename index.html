@@ -24,15 +24,13 @@
     <section id="newsletter-card">
       <!-- Sign-up form start -->
       <div id="newsletter-signup">
-        <div class="newsletter-hero-image">
-          <img
-            src="./assets/images/illustration-sign-up-desktop.svg"
-            srcset="
-              ./assets/images/illustration-sign-up-mobile.svg   600w,
-              ./assets/images/illustration-sign-up-desktop.svg 1000w
-            "
-          />
-        </div>
+        <picture class="newsletter-hero-image">
+          <source
+            srcset="./assets/images/illustration-sign-up-mobile.svg"
+            media="(max-width: 600px)"
+          >
+          <img src="./assets/images/illustration-sign-up-desktop.svg" />
+        </picture>
         <div class="newsletter-hero">
           <h2>Stay updated!</h2>
 
