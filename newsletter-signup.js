@@ -4,12 +4,14 @@ const emailInput = document.getElementById('sign-up-email');
 const errorMessage = document.getElementById('email-error-message');
 const successMessage = document.getElementById('success-message');
 const dismissButton = document.getElementById('dismiss-message');
+const newsletterEmail = document.getElementById('newsletter-email');
 
 let submitSuccess = false;
 
 const signupResult = (result) => {
     if (result) {
         successMessage.classList.remove('display-none');
+        newsletterEmail.innerText = emailInput.value;
         successMessage.classList.add('slide-in-fwd-center');
         console.log('Signup successful');
     }
