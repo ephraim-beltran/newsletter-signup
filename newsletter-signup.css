@@ -58,7 +58,7 @@
 
 }
 .newsletter-hero > ul > li {
-    list-style-image: url(/assets/images/icon-list.svg);
+    list-style-image: url(./assets/images/icon-list.svg);
     padding-left: 0.9em;
 }
 
@@ -108,7 +108,7 @@
     position: absolute;
 }
 #success-message::before {
-    content: url(/assets/images/icon-success.svg);
+    content: url(./assets/images/icon-success.svg);
 }
 #success-message > h2 {
     font-size: 3.5em;
