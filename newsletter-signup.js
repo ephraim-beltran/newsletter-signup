@@ -25,11 +25,13 @@ signupForm.addEventListener('submit', (e) => {
     // the array should only have a length of 2
     // e.g. 'user@email.com' will be split into ['user','email.com']
     if (emailInput.value === '' || emailInput.value == null || hasDomain !== 2) {
-        errorMessage.classList.remove('display-none')
+        errorMessage.classList.remove('display-none');
+        emailInput.classList.add('email-error');
         return;
     }
     if (!errorMessage.classList.contains('display-none')){
-        errorMessage.classList.add('display-none')
+        errorMessage.classList.add('display-none');
+        emailInput.classList.remove('email-error');
     }
     signUpCard.classList.add('scale-out-center');
 
