@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-#newsletter-signup {
+#newsletter-card {
     /* Primary colours */
     --tomato: hsl(4, 100%, 67%);
     /* Neutral colours */
@@ -19,21 +19,205 @@
     padding: 0;
 }
 
-h2 {
-    font-weight: 700;
-}
-
 #newsletter-signup {
-    max-width: 600px;
     background-color: var(--white);
     max-width: 925px;
-    padding: 1.5rem;
+    padding: 1.3rem;
     border-radius: 35px;
+    display:flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    column-gap: 3em;
+}
+#newsletter-signup > * {
+    flex-basis: 50%;
+    flex-shrink: 1;
+}
+.newsletter-hero {
+    margin-left: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.newsletter-hero-image > img {
+    width: 100%;
+}
+.newsletter-hero > h2 {
+    font-weight: 700;
+    font-size: 3.4em;
+    color: var(--dark-slate-grey);
+    margin: 0;
+}
+
+.newsletter-hero > p {
+    line-height: 1.5em;
+}
+.newsletter-hero > ul {
+    line-height: 2;
+    padding-left: 25px;
+
+}
+.newsletter-hero > ul > li {
+    list-style-image: url(/assets/images/icon-list.svg);
+    padding-left: 0.9em;
+}
+
+.newsletter-hero > form {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0.8em;
+    margin-top: 1.5em;
+}
+
+.newsletter-hero > form > .form-label {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.form-label > * {
+    font-weight: 700;
+    font-size: 0.75em;
+}
+.newsletter-hero > form > :is(input, button) {
+    flex-basis: 100%;
+    padding: 1.2em 1.5em;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 0.9em;
+    word-spacing: 0.01em;
+}
+.newsletter-hero > form > button {
+    text-align: center;
+    border-width: 0;
+    background-color: var(--charcoal-grey);
+    color: var(--white);
+    font-weight: 700;
+    margin-top: 0.5em;
+}
+
+
+#success-message {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    border-radius: 35px;
+    box-sizing: border-box;
+    max-width: 500px;
+    padding: 3em;
+    position: absolute;
+}
+#success-message::before {
+    content: url(/assets/images/icon-success.svg);
+}
+#success-message > h2 {
+    font-size: 3.5em;
+    color: var(--dark-slate-grey);
+    margin-bottom: 0.3em;
+}
+#success-message > p {
+    line-height: 1.5em;
+}
+#success-message > button {
+    border-color: var(--charcoal-grey);
+    border-width: 0;
+    background-color: var(--charcoal-grey);
+    border-radius: 10px;
+    color: var(--white);
+    padding: 1.2em 1.5em;
+    font-weight: 700;
+    font-size: 0.95em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+:is(
+    .newsletter-hero > form > input,
+):is(:hover, :active, :focus) {
+    cursor: pointer;
+    outline: 1px solid var(--charcoal-grey);    
+}
+:is(
+    .newsletter-hero > form > button,
+    #success-message > button
+):is(:hover, :active, :focus) {
+    background-image: linear-gradient(
+        65deg,
+    hsl(0deg 100% 67%) 0%,
+    hsl(1deg 100% 67%) 17%,
+    hsl(1deg 100% 67%) 25%,
+    hsl(2deg 100% 67%) 31%,
+    hsl(3deg 100% 67%) 37%,
+    hsl(3deg 100% 67%) 42%,
+    hsl(4deg 100% 67%) 47%,
+    hsl(5deg 100% 67%) 53%,
+    hsl(6deg 100% 67%) 58%,
+    hsl(8deg 100% 67%) 63%,
+    hsl(9deg 100% 67%) 69%,
+    hsl(11deg 100% 67%) 75%,
+    hsl(13deg 100% 67%) 83%,
+    hsl(14deg 100% 67%) 100%
+    );
+    cursor: pointer;
+}
+
+/* Error state styling */
+.email-error > input {
+    color: var(--tomato);
+    border: 1px solid var(--tomato);
+    background-image: var(--tomato);
+    font-weight: 700;
+    background-color: rgba(255, 98, 87, 0.180);
+}
+#email-error-message {
+    color: var(--tomato);
+}
+
+.display-none {
+    display: none !important;
 }
 /* Mobile view styling */
 @media only screen and (max-width: 600px) {
-    #newsletter-signup {
+    #newsletter-signup , #success-message {
+        max-width: 600px;
         min-width: 100%;
+        height: 100%;
         border-radius: 0;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 2em !important;
+        position: absolute;
+        top: 0;
+    }
+    .newsletter-hero-image {
+        min-width: 100%;
+    }
+    .newsletter-hero {
+        margin: 1.5em 1.5em;
+    }
+    .newsletter-hero > h2 {
+        font-size: 2em;
+    }
+    .newsletter-hero > ul {
+        line-height: 1.5;
+        padding-left: 25px;
+    }
+    .newsletter-hero > form > submit {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    #success-message {
+        height: 100vh;
+        padding: 1.5em;
+    }
+    #success-message::before {
+        margin-top: 7em;
+    }
+    #success-message > h2 {
+        font-size: 2.5em;
+    }
+    #success-message > button {
+        margin-top: auto;
     }
 }
