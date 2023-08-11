@@ -161,7 +161,7 @@
 }
 
 /* Error state styling */
-.email-error > input {
+.email-error {
     color: var(--tomato);
     border: 1px solid var(--tomato);
     background-image: var(--tomato);
