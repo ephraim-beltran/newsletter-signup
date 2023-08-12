@@ -60,9 +60,10 @@ Desktop view (1440px)
 
 Mobile view
 
-![](./assets/screenshots/Screenshot-Mobile.png)
+![Mobile view](./assets/screenshots/Screenshot-Mobile.png)
 
-![](./assets/screenshots/Screenshot-Mobile-active.png)
+![Mobile active view](./assets/screenshots/Screenshot-Mobile-active.png)
 
-![](./assets/screenshots/Screenshot-Mobile-error.png)
+![Mobile error view](./assets/screenshots/Screenshot-Mobile-error.png)
 
+![Mobile success view](./assets/screenshots/Screenshot-Mobile-success.png)
